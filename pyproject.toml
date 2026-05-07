@@ -70,11 +70,11 @@ include = [
 ]
 
 [tool.black]
-line-length = 88
+line-length = 100
 target-version = ["py39"]
 
 [tool.ruff]
-line-length = 88
+line-length = 100
 target-version = "py39"
 select = ["E", "F", "I", "UP"]
 ignore = ["E501"]
