@@ -88,7 +88,8 @@ ignore_missing_imports = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 # removed --cov-report=term-missing for now, the output was cluttering my terminal
-addopts = "--cov=markitdown"
+# added -v so I can actually see which tests pass/fail at a glance
+addopts = "--cov=markitdown -v"
 
 [tool.coverage.run]
 source = ["src/markitdown"]
