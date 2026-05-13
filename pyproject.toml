@@ -90,7 +90,8 @@ testpaths = ["tests"]
 # removed --cov-report=term-missing for now, the output was cluttering my terminal
 # added -v so I can actually see which tests pass/fail at a glance
 # removed -x (stop on first failure) -- actually want to see all failures at once
-addopts = "--cov=markitdown -v"
+# added --tb=short so tracebacks are readable but not overwhelming
+addopts = "--cov=markitdown -v --tb=short"
 
 [tool.coverage.run]
 source = ["src/markitdown"]
@@ -99,3 +100,5 @@ omit = ["tests/*"]
 [tool.coverage.report]
 # show lines missing coverage so I know what to write tests for next
 show_missing = true
+# only bother reporting files with less than 100% coverage
+skip_covered = true
