@@ -89,7 +89,8 @@ ignore_missing_imports = true
 testpaths = ["tests"]
 # removed --cov-report=term-missing for now, the output was cluttering my terminal
 # added -v so I can actually see which tests pass/fail at a glance
-addopts = "--cov=markitdown -v"
+# added -x so it stops on first failure -- saves time when iterating locally
+addopts = "--cov=markitdown -v -x"
 
 [tool.coverage.run]
 source = ["src/markitdown"]
